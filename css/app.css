@@ -3,6 +3,15 @@
 * {
   color: #3d3d3d;
 }
+
+@font-face {
+  font-family: MolnlyckeDin;
+  src: url('./fonts/Molnlycke Din-Regular.otf');
+}
+* {
+  font-family: MolnlyckeDin !important;
+}
+
 .main {
   max-width: 600px;
   margin: 0 auto;
@@ -17,7 +26,6 @@
 .description {
   margin-bottom: 20px;
 }
-
 
 .form .btn:disabled {
   background-color: gray;
@@ -63,22 +71,20 @@
   font-size: 0.7rem;
 }
 
-
 .btn {
-    background-color: white;
-    border: solid 1px #009c14;
-    color: #009c14;
-    border-radius: 5px;
-    width: 100px;
-    padding: 5px 10px;
-    transition: 0.3s;
-    display: block;
-    margin:0 auto;
-    text-align: center;
-  }
-  
-  .btn:hover {
-    background-color: #009c14;
-    color: white;
-  }
-  
+  background-color: white;
+  border: solid 1px #009c14;
+  color: #009c14;
+  border-radius: 5px;
+  width: 100px;
+  padding: 5px 10px;
+  transition: 0.3s;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: #009c14;
+  color: white;
+}

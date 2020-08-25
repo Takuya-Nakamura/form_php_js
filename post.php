@@ -13,7 +13,6 @@ if (count($error_msgs) > 0) {
     http_response_code(400);
     echo (json_encode($res_data));
     exit;
-
 } else {
     //正常処理
     var_dump("input success");
@@ -28,7 +27,8 @@ if (count($error_msgs) > 0) {
 
 ######## mail送信関連 ########
 
-function send_mail_to_user(){
+function send_mail_to_user()
+{
     $res = mb_send_mail(
         // $_POST['mail'],
         "nakamura0803@gmail.com",  // 送信先メールアドレス
@@ -39,8 +39,9 @@ function send_mail_to_user(){
     var_dump($res);
 }
 
-function create_body_user_mail(){
-    global $question1,$question2,$question3;
+function create_body_user_mail()
+{
+    global $question1, $question2, $question3;
     return <<<EOD
 {$_POST['name']}様
 ご応募ありがとうございました。
@@ -52,10 +53,11 @@ function create_body_user_mail(){
 
 以上
 
-EOD;   
+EOD;
 }
 
-function send_mail_to_corporate(){
+function send_mail_to_corporate()
+{
     $res = mb_send_mail(
         "nakamura0803+1@gmail.com",  // 送信先メールアドレス
         "【クイズへの回答がありました】",
@@ -65,8 +67,9 @@ function send_mail_to_corporate(){
     var_dump($res);
 }
 
-function create_body_corporate_mail(){
-    global $question1,$question2,$question3;
+function create_body_corporate_mail()
+{
+    global $question1, $question2, $question3;
     return <<<EOD
 以下の内容でクイズへの回答がありました。
 
@@ -79,7 +82,7 @@ function create_body_corporate_mail(){
 
 以上
 
-EOD;   
+EOD;
 }
 
 ######## validation関連 ########
@@ -99,7 +102,6 @@ function question1Check()
     if (!$_POST['question1']) {
         $error_msgs[] = ["name" => "question1", "message" => "設問1が未回答です。"];
     }
-
 }
 
 function question2Check()
@@ -116,7 +118,6 @@ function question3Check()
     if (!$_POST['question3']) {
         $error_msgs[] = ["name" => "question3", "message" => "設問3が未回答です。"];
     }
-
 }
 
 function nameCheck()
@@ -125,7 +126,6 @@ function nameCheck()
     if (!$_POST['name']) {
         $error_msgs[] = ["name" => "name", "message" => "名前が未回答です。"];
     }
-
 }
 function telCheck()
 {
@@ -133,7 +133,6 @@ function telCheck()
     if (!$_POST['tel']) {
         $error_msgs[] = ["name" => "tel", "message" => "電話番号が未回答です。"];
     }
-
 }
 
 function emailCheck()
@@ -142,5 +141,4 @@ function emailCheck()
     if (!$_POST['email']) {
         $error_msgs[] = ["name" => "email", "message" => "メールアドレスが未回答です。"];
     }
-
 }
