@@ -74,6 +74,7 @@
     transition: 0.3s;
     display: block;
     margin:0 auto;
+    text-align: center;
   }
   
   .btn:hover {
