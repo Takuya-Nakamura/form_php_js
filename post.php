@@ -1,4 +1,6 @@
 <?php
+if(empty($_POST)) exit;
+
 include './conf.php';
 
 // mb_email
@@ -51,12 +53,13 @@ function conv_post_data (){
 
 function send_mail_to_user()
 {
+    global $data;
     $res = mb_send_mail(
-        // $_POST['mail'],
-        "nakamura0803@gmail.com",  // 送信先メールアドレス
+        $data['email'],
+        // "nakamura0803@gmail.com",  // 送信先メールアドレス
         "アンケートにご協力下さいましてありがとうございました",
         create_body_user_mail(),
-        "From: my-mail@example.com\r\n"
+        "From: no-reply@molnlycke.com\r\n"
     );
 }
 
@@ -81,7 +84,7 @@ function send_mail_to_corporate()
         "nakamura0803@gmail.com",  // 送信先メールアドレス
         "第22回日本褥瘡学会学術集会アンケート回答",
         create_body_corporate_mail(),
-        "From: my-mail@example.com\r\n"
+        "From: no-reply@molnlycke.com\r\n"
     );
 }
 
