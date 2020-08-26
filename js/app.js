@@ -41,8 +41,8 @@ function post(data) {
     }).done(function (data) {
         console.log("ok");
         console.log(data)
-        // clearForm()
-        // location.href = "/answer.php"
+        clearForm()
+        location.href = "/answer.php"
 
     }).fail(function (error) {
         if (error.status == '400') {
