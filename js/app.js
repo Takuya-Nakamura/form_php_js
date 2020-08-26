@@ -2,15 +2,32 @@
 // event
 //////////////////////////////
 $(function () {
-    var res = confirm("本祭とは医療関係者のみが閲覧出来ます。医療関係者の方はOKを押してください。それ以外の方はキャンセルをしてください。")
-    if (!res) location.href = "https://www.yahoo.co.jp/"
+    // var res = confirm("本祭とは医療関係者のみが閲覧出来ます。医療関係者の方はOKを押してください。それ以外の方はキャンセルをしてください。")
+    // if (!res) location.href = "https://www.yahoo.co.jp/"
 });
 
 $("#submit").click(function () {
+
     var data = getFormData()
     if (checkFormData(data)) post(data)
     return false;
 })
+
+$("#policy").change(function () {
+    console.log("onChange")
+    var val = $('#policy:checked').val();
+    console.log("val", val)
+    if (val) {
+        //選択時
+        console.log("選択時")
+        $("#submit").prop("disabled", false)
+    } else {
+        //未選択時
+        console.log("未選択")
+        $("#submit").prop("disabled", true)
+    }
+})
+
 
 //////////////////////////////
 // functions

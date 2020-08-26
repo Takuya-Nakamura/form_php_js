@@ -9,24 +9,55 @@
   src: url('./fonts/Molnlycke Din-Regular.otf');
 }
 * {
-  font-family: MolnlyckeDin !important;
+  /* font-family: MolnlyckeDin !important; */
+  line-height: 1.2rem;
+}
+
+.header{
+  width: 100%;
+  height: 60px;
+  background-color: #009c14;
+  
+}
+.header-title{
+  font-size: 1.1rem;
+  line-height: 1.1rem;
+  margin-bottom: 50px;
+  text-align: center;
+
+}
+.header-title h1{
+  color:white;
+  line-height: 60px;
 }
 
 .main {
   max-width: 600px;
   margin: 0 auto;
-  padding: 30px;
+  padding: 30px 10px;
 }
 
 .title {
-  font-size: 2rem;
-  margin-bottom: 20px;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  margin-bottom: 50px;
+}
+.title h1{
+  color: #009c14;
+  
 }
 
 .description {
-  margin-bottom: 20px;
+  margin-bottom: 50px;
+  
 }
 
+.form {
+  border:1px solid #dfdfdf;
+  border-radius: 5px;
+  padding: 10px;
+  
+}
 .form .btn:disabled {
   background-color: gray;
   border: none;
@@ -64,7 +95,17 @@
   width: 100%;
   border-radius: 5px;
   border: 1px solid black;
+  margin-bottom: 10px;
 }
+
+.form .form-select {
+  padding: 10px 10px 10px 5px ;
+
+  border-radius: 5px;
+  border: 1px solid black;
+  margin-bottom: 10px;
+}
+
 
 .form .require {
   color: red;
@@ -87,4 +128,28 @@
 .btn:hover {
   background-color: #009c14;
   color: white;
+}
+
+
+.form .policy-wrapper{
+  text-align: center;
+}
+
+.form .policy-wrapper .checkbox{
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left:-1.5rem;
+}
+
+ /* note */
+.submit-note{
+  text-align: center;
+  font-size: 0.8rem;
+  margin-top:15px;
+  
+}
+.policy-note{
+  font-size: 0.8rem;
+  margin-top:15px;
+  text-align: left;
 }
