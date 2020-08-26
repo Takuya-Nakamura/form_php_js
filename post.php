@@ -92,8 +92,8 @@ function create_body_corporate_mail()
 以下の内容でアンケート回答がありました。
 
 Q1: {$data['question1']}
-Q2: {$data['question1']}
-Q3: {$data['question1']}
+Q2: {$data['question2']}
+Q3: {$data['question3']}
 名前: {$data['name']}
 電子メール: {$data['email']}
 ご職業:{$data['jobs']}
