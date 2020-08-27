@@ -56,7 +56,6 @@ function send_mail_to_user()
     global $data;
     $res = mb_send_mail(
         $data['email'],
-        // "nakamura0803@gmail.com",  // 送信先メールアドレス
         "アンケートにご協力下さいましてありがとうございました",
         create_body_user_mail(),
         "From: no-reply@molnlycke.com\r\n"
@@ -82,7 +81,7 @@ function send_mail_to_corporate()
 {
     $res = mb_send_mail(
         "nakamura0803@gmail.com",
-        // "info.jp@molnlycke.com"
+        // "info.jp@molnlycke.com",
         "第22回日本褥瘡学会学術集会アンケート回答",
         create_body_corporate_mail(),
         "From: no-reply@molnlycke.com\r\n"
@@ -91,7 +90,7 @@ function send_mail_to_corporate()
 
 function create_body_corporate_mail()
 {
-    global $data, $question1, $question2, $question3, $jobs, $notification;
+    global $data;
     return <<<EOD
 以下の内容でアンケート回答がありました。
 
@@ -106,7 +105,7 @@ Q3: {$data['question3']}
 都道府県:{$data['prefecture']}
 市区町村:{$data['city']}
 番地:{$data['address']}
-ご所蔵施設名:{$data['facility']}
+ご所属施設名:{$data['facility']}
 通知の同意:{$data['notification']}
 
 以上
