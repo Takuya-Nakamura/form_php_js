@@ -112,7 +112,7 @@ include './conf.php';
                         <?php endforeach; ?>
                     </select>
 
-                    <input class="form-input job_other" type="text" name='job_other' placeholder="その他の方は詳細のご記入をお願い致します。＊">
+                    <input class="form-input job_other" type="text" name='job_other' placeholder="その他の方は詳細のご記入をお願い致します＊">
 
                 </div>
 
