@@ -8,6 +8,7 @@ include './conf.php';
 
 <head>
     <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+    <link rel="shortcut icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/app.css">
     <script src="/js/jquery.min.js"></script>
@@ -23,8 +24,6 @@ include './conf.php';
     </header>
 
     <main class="main">
-
-
         <div class="title">
             <h1>第22回日本褥瘡学会学術集会 オンライン展示 特設サイト</h1>
         </div>
@@ -113,7 +112,7 @@ include './conf.php';
                         <?php endforeach; ?>
                     </select>
 
-                    <input class="form-input" type="text" name='job_other' placeholder="その他の方は詳細のご記入をお願い致します。">
+                    <input class="form-input job_other" type="text" name='job_other' placeholder="その他の方は詳細のご記入をお願い致します。">
 
                 </div>
 
@@ -173,7 +172,7 @@ include './conf.php';
         </div>
 
     </main>
-    
+
     <footer>
         <div class="footer-info">
             <p class="company">メンリッケヘルスケア株式会社</p>

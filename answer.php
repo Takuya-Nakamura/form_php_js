@@ -7,6 +7,7 @@ include './conf.php';
 <html>
 
 <head>
+    <link rel="shortcut icon" href="/images/favicon.ico">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/app.css">

@@ -2,8 +2,8 @@
 // event
 //////////////////////////////
 $(function () {
-    // var res = confirm("本祭とは医療関係者のみが閲覧出来ます。医療関係者の方はOKを押してください。それ以外の方はキャンセルをしてください。")
-    // if (!res) location.href = "https://www.yahoo.co.jp/"
+    var res = confirm("本サイトは医療関係者のみが閲覧出来ます。医療関係者の方はOKを押してください。それ以外の方はキャンセルをしてください。")
+    if (!res) location.href = "https://www.molnlycke.jp/"
 });
 
 $("#submit").click(function () {
@@ -16,15 +16,22 @@ $("#policy").change(function () {
     var val = $('#policy:checked').val();
     if (val) {
         //選択時
-        console.log("選択時")
         $("#submit").prop("disabled", false)
     } else {
         //未選択時
-        console.log("未選択")
         $("#submit").prop("disabled", true)
     }
 })
 
+$('select[name=jobs]').change(function () {
+    console.log("change", $(this).val())
+    if ($(this).val() == 7) {
+        $('input[name=job_other]').fadeIn()
+    } else {
+        $('input[name=job_other]').fadeOut()
+        $('input[name=job_other]').val("")
+    }
+})
 
 //////////////////////////////
 // functions
@@ -90,7 +97,7 @@ function checkFormData(data) {
         messages.push("メールアドレスの形式が不正です")
     }
     if (!data['jobs']) messages.push("ご職業が未入力です")
-    if (data['jobs'] == 7 && data['job_other']) messages.push("その他ご職業詳細が未入力です")
+    if (data['jobs'] == 7 && !data['job_other']) messages.push("その他ご職業詳細が未入力です")
     if (!data['zip-code']) messages.push("郵便番号が未入力です")
     if (!data['prefecture']) messages.push("都道府県が未入力です")
     if (!data['city']) messages.push("市区町村が未入力です")
