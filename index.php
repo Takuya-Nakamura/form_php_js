@@ -7,6 +7,7 @@ include './conf.php';
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/app.css">
     <script src="/js/jquery.min.js"></script>
@@ -15,22 +16,24 @@ include './conf.php';
 
 <body>
 
-    <header class="header">      
-        <div>
-        <img class="header-logo" src="/images/logo2.png">
+    <header class="header">
+        <div class="header-logo">
+            <img class="header-logo-image" src="/images/logo.png">
         </div>
     </header>
 
     <main class="main">
-        
+
 
         <div class="title">
             <h1>第22回日本褥瘡学会学術集会 オンライン展示 特設サイト</h1>
-        </div> 
-
+        </div>
+        <div class="key-image">
+            <img src="./images/foot.jpg" alt="">
+        </div>
         <div class="description">
-            メンリッケヘルスケア株式会社の特設サイトへようこそ！<br>
-            メンリッケヘルスケア株式会社では、弊社製品に関しますアンケートをご用意しております。<br>
+            メンリッケヘルスケア株式会社の特設サイトへようこそ！<br><br>
+            メンリッケヘルスケア株式会社では、弊社製品に関しますアンケートをご用意しております。<br><br>
             ご回答頂いた場合、ご希望の方には特製トートバックをお送り致します。<br>
             （ご発送は9月末予定）
             <br><br><br>
@@ -39,9 +42,9 @@ include './conf.php';
 
         <div class="form">
 
-            <form  method="post">
+            <form method="post">
                 <div class="form-item">
-                    <label class="form-label">Q1: 
+                    <label class="form-label">Q1:
                         メピレックスボーダーフレックスに使用しているドレッシング材の柔軟性を向上させる技術の名前は何ですか？
                     </label>
 
@@ -49,7 +52,7 @@ include './conf.php';
                     <?php foreach ($question1 as $key => $val) : ?>
                         <?php $id = "{$q}-${key}" ?>
                         <div class="form-radio-wrap">
-                            <input type="radio" name="<?php echo $q ?>" id="<?php echo $id ?>" value="<?php echo $key ?>" required/>
+                            <input type="radio" name="<?php echo $q ?>" id="<?php echo $id ?>" value="<?php echo $key ?>" required />
                             <label for="<?php echo $id ?>"><?php echo $val ?></label>
                         </div>
                     <?php endforeach; ?>
@@ -62,7 +65,7 @@ include './conf.php';
                     <?php foreach ($question2 as $key => $val) : ?>
                         <?php $id = "{$q}-${key}" ?>
                         <div class="form-radio-wrap">
-                            <input type="radio" name="<?php echo $q ?>" id="<?php echo $id ?>" value="<?php echo $key ?>" required/>
+                            <input type="radio" name="<?php echo $q ?>" id="<?php echo $id ?>" value="<?php echo $key ?>" required />
                             <label for="<?php echo $id ?>"><?php echo $val ?></label>
                         </div>
                     <?php endforeach; ?>
@@ -74,7 +77,7 @@ include './conf.php';
                     <?php foreach ($question3 as $key => $val) : ?>
                         <?php $id = "{$q}-${key}" ?>
                         <div class="form-radio-wrap">
-                            <input type="radio" name="<?php echo $q ?>" id="<?php echo $id ?>" value="<?php echo $key ?>" required/>
+                            <input type="radio" name="<?php echo $q ?>" id="<?php echo $id ?>" value="<?php echo $key ?>" required />
                             <label for="<?php echo $id ?>"><?php echo $val ?></label>
                         </div>
                     <?php endforeach; ?>
@@ -84,6 +87,9 @@ include './conf.php';
                 <div class="description">
 
                     ご協力ありがとうございました。<br><br><br>
+                    <div class="key-image">
+                        <img src="./images/man.jpg" alt="">
+                    </div>
 
                     特製ロゴ入りトートバッグをご希望の方は、下記にご入力お願い致します。<br>（＊は必須項目です）
 
@@ -115,7 +121,7 @@ include './conf.php';
                 <div class="form-item">
                     <label class="form-label">ご住所<span class="require">＊</span></label>
                     <input class="form-input" type='text' maxlength="7" name='zip-code' required placeholder="郵便番号(数字のみでご入力ください)＊" onKeyUp="AjaxZip3.zip2addr(this,'','prefecture','city');">
-                    
+
 
                     <input class="form-input" type='text' name='prefecture' required placeholder="都道府県＊">
                     <input class="form-input" type='text' name='city' required placeholder="市区町村＊">
@@ -142,7 +148,7 @@ include './conf.php';
                 <div class="form-item">
                     <div class="policy-wrapper">
                         <label class="form-label">Mölnlyckeの<a href="https://www.molnlycke.com/about-this-site/terms-of-use/" target="_blank">リーガル</a>と<a href="https://www.molnlycke.com/about-this-site/policies/" target="_blank">プライバシーポリシー</a>に同意致します。<span class="require">＊</span></label>　
-                        
+
                         <input type="checkbox" name="policy" id="policy" class="checkbox" value="1" required>
                         <p class="policy-note" id="submit-note">
                             いいえを選択された場合でも、トートバッグ発送のご連絡のためにE-mailでご連絡申し上げる場合がございます。
@@ -157,11 +163,30 @@ include './conf.php';
 
                 <input type='submit' class="btn" id="submit" value="送信" disabled></a>
                 <p class="submit-note" id="submit-note"> ※プライバシーポリシーに同意いただかないと送信出来ません。</p>
+                <div class="key-image">
+                    <img src="./images/lady.jpg" alt="">
+                </div>
+
             </form>
 
 
         </div>
+
     </main>
+    
+    <footer>
+        <div class="footer-info">
+            <p class="company">メンリッケヘルスケア株式会社</p>
+            <p class="sub-text">東京都新宿区西新宿6-20-7</p>
+            <p class="sub-text">コンシェリア西新宿タワーズウエスト</p>
+            <p class="sub-text">TEL：03-6914-5004</p>
+        </div>
+
+        <div class="footer-logo">
+            <img src="./images/logo2.png" alt="">
+        </div>
+
+    </footer>
 
     <script src="/js/app.js"></script>
 

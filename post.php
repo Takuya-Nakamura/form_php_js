@@ -81,7 +81,8 @@ EOD;
 function send_mail_to_corporate()
 {
     $res = mb_send_mail(
-        "nakamura0803@gmail.com",  // 送信先メールアドレス
+        "nakamura0803@gmail.com",
+        // "info.jp@molnlycke.com"
         "第22回日本褥瘡学会学術集会アンケート回答",
         create_body_corporate_mail(),
         "From: no-reply@molnlycke.com\r\n"
@@ -119,7 +120,6 @@ EOD;
 ###############################
 function save_to_csv()  {
     global $data;
-    // $filename = './save/data.csv';
     $filename = '../data.csv';
     $csv = [];
     foreach ($data as $value){
