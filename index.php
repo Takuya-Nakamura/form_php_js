@@ -96,12 +96,12 @@ include './conf.php';
 
                 <div class="form-item">
                     <label class="form-label">お名前<span class="require">＊</span></label>
-                    <input class="form-input" type="text" name='name' required placeholder="お名前">
+                    <input class="form-input" type="text" name='name' required placeholder="お名前＊">
                 </div>
 
                 <div class="form-item">
                     <label class="form-label">電子メール<span class="require">＊</span></label>
-                    <input class="form-input" type="email" name='email' required placeholder="電子メール">
+                    <input class="form-input" type="email" name='email' required placeholder="電子メール＊">
                 </div>
 
                 <div class="form-item">
@@ -112,7 +112,7 @@ include './conf.php';
                         <?php endforeach; ?>
                     </select>
 
-                    <input class="form-input job_other" type="text" name='job_other' placeholder="その他の方は詳細のご記入をお願い致します。">
+                    <input class="form-input job_other" type="text" name='job_other' placeholder="その他の方は詳細のご記入をお願い致します。＊">
 
                 </div>
 
