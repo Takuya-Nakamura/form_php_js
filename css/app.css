@@ -104,6 +104,10 @@
   margin-bottom: 10px;
 }
 
+.form .job_other {
+  display: none;
+}
+
 .form .form-select {
   padding: 10px 10px 10px 5px ;
 
