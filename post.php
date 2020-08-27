@@ -120,7 +120,7 @@ EOD;
 ###############################
 function save_to_csv()  {
     global $data;
-    $filename = '../data.csv';
+    $filename = './csv/list.csv';
     $csv = [];
     foreach ($data as $value){
         $csv[] =$value;

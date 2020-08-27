@@ -1,0 +1,7 @@
+AuthUserFile /usr/home/ai116teg9t/html/csv/.htpasswd
+AuthGroupFile /dev/null
+AuthName "Protected Area"
+AuthType Basic
+<Limit GET POST>
+require valid-user
+</Limit>
