@@ -6,4 +6,4 @@ $filedata = mb_convert_encoding($filedata, "SJIS", "UTF-8");
 
 header('Content-Type: application/force-download');
 header('Content-Disposition: attachment; filename="'.$filename.'"');
-echo($filepath);
+echo($filedata);

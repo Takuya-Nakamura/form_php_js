@@ -7,6 +7,7 @@ $(function () {
 });
 
 $("#submit").click(function () {
+
     var data = getFormData()
     if (checkFormData(data)) post(data)
     return false;
@@ -55,7 +56,7 @@ function post(data) {
         if (error.status == '400') {
             var response = JSON.parse(error.responseText)
             var msgText = "以下のエラーがありました。ご確認ください。\n"
-            response.errors.map((item) => {
+            response.errors.map(function (item) {
                 msgText += item['message'] + "\n"
             })
             alert(msgText)

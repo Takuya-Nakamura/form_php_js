@@ -33,7 +33,7 @@ include './conf.php';
         <div class="description">
             メンリッケヘルスケア株式会社の特設サイトへようこそ！<br><br>
             メンリッケヘルスケア株式会社では、弊社製品に関しますアンケートをご用意しております。<br><br>
-            ご回答頂いた場合、ご希望の方には特製トートバックをお送り致します。<br>
+            ご協力頂いた場合、ご希望の方には特製ロゴ入りトートバックをお送り致します。<br>
             （ご発送は9月末予定）
             <br><br><br>
             アンケートはこちらからどうぞ↓
@@ -130,7 +130,7 @@ include './conf.php';
 
                 <div class="form-item">
 
-                    <label class="form-label">今後メンリッケヘルスケア株式会社からのセミナーや製品についてのご案内といった情報を今後お受け取りになられることをご希望の場合は”はい”を選択して下さい。<span class="require">＊</span></label>
+                    <label class="form-label">今後メンリッケヘルスケア株式会社からのセミナーや製品についてのご案内などをお受け取りになられることをご希望の場合は”はい”を選択して下さい。<span class="require">＊</span></label>
 
                     <div class="policy-wrapper">
                         <?php $name = 'notification' ?>
@@ -142,6 +142,10 @@ include './conf.php';
                             </span>
                         <?php endforeach; ?>
                     </div>
+                    <p class="policy-note" id="submit-note">
+                        いいえを選択された場合でも、トートバッグ発送のご連絡のためにE-mailでご連絡申し上げる場合がございます。
+                    </p>
+
                 </div>
 
                 <div class="form-item">
@@ -149,9 +153,6 @@ include './conf.php';
                         <label class="form-label">Mölnlyckeの<a href="https://www.molnlycke.com/about-this-site/terms-of-use/" target="_blank">リーガル</a>と<a href="https://www.molnlycke.com/about-this-site/policies/" target="_blank">プライバシーポリシー</a>に同意致します。<span class="require">＊</span></label>　
 
                         <input type="checkbox" name="policy" id="policy" class="checkbox" value="1" required>
-                        <p class="policy-note" id="submit-note">
-                            いいえを選択された場合でも、トートバッグ発送のご連絡のためにE-mailでご連絡申し上げる場合がございます。
-                        </p>
                         <p class="policy-note" id="submit-note">
                             Box 13080, Gamlestadvägen 3C, SE-40252 Göteborg, Sweden. Privacy Policy The Mölnlycke trademark, name and respective logo are registered globally to one or more of the Mölnlycke Health Care Group of Companies. © 2020 Mölnlycke Health Care AB. All rights reserved.
                         </p>
@@ -161,7 +162,11 @@ include './conf.php';
 
 
                 <input type='submit' class="btn" id="submit" value="送信" disabled></a>
-                <p class="submit-note" id="submit-note"> ※プライバシーポリシーに同意いただかないと送信出来ません。</p>
+
+                <p class="submit-note" id="submit-note"> 
+                    ※プライバシーポリシーに同意いただかないと送信出来ません。 <br>
+                    ※アンケートの回答のみご覧になりたい方は<a href="answer.php">こちら</a>
+                </p>
                 <div class="key-image">
                     <img src="./images/lady.jpg" alt="">
                 </div>

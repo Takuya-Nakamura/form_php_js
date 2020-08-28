@@ -27,6 +27,9 @@
   height: 55px;
 }
 
+main{
+  display: block;
+}
 
 .main {
   max-width: 600px;
