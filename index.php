@@ -13,6 +13,19 @@ include './conf.php';
     <link rel="stylesheet" href="/css/app.css">
     <script src="/js/jquery.min.js"></script>
     <script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177047657-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-177047657-1');
+    </script>
+
 </head>
 
 <body>
@@ -143,7 +156,7 @@ include './conf.php';
                         <?php endforeach; ?>
                     </div>
                     <p class="policy-note" id="submit-note">
-                        いいえを選択された場合でも、トートバッグ発送のご連絡のためにE-mailでご連絡申し上げる場合がございます。
+                        いいえを選択された場合でも、特製ロゴ入りトートバッグ発送のご連絡のためにE-mailでご連絡申し上げる場合がございます。
                     </p>
 
                 </div>
@@ -163,7 +176,7 @@ include './conf.php';
 
                 <input type='submit' class="btn" id="submit" value="送信" disabled></a>
 
-                <p class="submit-note" id="submit-note"> 
+                <p class="submit-note" id="submit-note">
                     ※プライバシーポリシーに同意いただかないと送信出来ません。 <br>
                     ※アンケートの回答のみご覧になりたい方は<a href="answer.php">こちら</a>
                 </p>

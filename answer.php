@@ -11,6 +11,15 @@ include './conf.php';
     <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/app.css">
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-177047657-1');
+    </script>
+
 </head>
 
 <body>

@@ -56,7 +56,7 @@ function send_mail_to_user()
     global $data;
     $res = mb_send_mail(
         $data['email'],
-        "アンケートにご協力下さいましてありがとうございました",
+        "メンリッケヘルスケア アンケートにご協力くださいましてありがとうございました",
         create_body_user_mail(),
         "From: no-reply@molnlycke.com\r\n"
     );
@@ -65,14 +65,41 @@ function send_mail_to_user()
 function create_body_user_mail()
 {
     return <<<EOD
-この度は、第22回日本褥瘡学会学術集会オンライン展示のアンケートにご協力下さいまして、ありがとうございます。
+お世話になっております。
 
-トートバッグをご希望頂いた皆様へのご発送は9月末を予定しております。
+「第22回 日本褥瘡学会学術集会　オンライン展示　特設サイト」においてアンケートにご協力頂き有難うございました。
+    
+トートバッグは、ご記載頂いた宛先に送付させて頂きます。
+    
+9月末頃の発送を予定しております。大変お待たせいたしますが、ご了承頂きますようお願い申し上げます。
+    
+     
+    
+メンリッケヘルスケア株式会社 ウンドケア事業部
+    
+https://www.molnlycke.jp/
+    
+     
+    
+     
+    
+本メールは、「第22回 日本褥瘡学会学術集会　オンライン展示　特設サイト」においてアンケートにご協力いただいた方に自動送信しております。
+    
+トートバッグ発送のご連絡のためにE-mailを差し上げる場合がございます。
+    
+そのほか、アンケート内においてセミナーや製品についてのご案内といった情報配信についてご希望いただいた方には、このE-mailアドレス宛にメール送信させていただくことがございます。
+    
+     
+    
+リーガル　https://www.molnlycke.com/about-this-site/terms-of-use/
 
-メンリッケヘルスケア株式会社
-スタッフ一同
+プライバシーポリシー　https://www.molnlycke.com/about-this-site/policies/
 
-以上
+
+
+Box 13080, Gamlestadvägen 3C, SE-40252 Göteborg, Sweden. Privacy Policy
+
+The Mölnlycke trademark, name and respective logo are registered globally to one or more of the Mölnlycke Health Care Group of Companies. © 2020 Mölnlycke Health Care AB. All rights reserved
 
 EOD;
 }
