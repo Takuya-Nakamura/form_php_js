@@ -3,6 +3,9 @@ if(empty($_POST)) exit;
 
 include './conf.php';
 
+// timezone
+date_default_timezone_set('Asia/Tokyo');
+
 // mb_email
 mb_language("Japanese");
 mb_internal_encoding("UTF-8");
@@ -33,6 +36,7 @@ if (count($error_msgs) > 0) {
 
 function conv_post_data (){
     global $data, $question1, $question2, $question3,$question4,$question5, $jobs, $notification;
+    $data['now'] = date("Y-m-d_H:i:s");
     $data['question1'] =  $question1[$_POST['question1']];
     $data['control_other'] =  $_POST['control_other'];
     $data['question2'] = $question2[$_POST['question2']];
@@ -52,7 +56,7 @@ function conv_post_data (){
     $data['facility'] = $_POST['facility'];
     $data['department'] = $_POST['department'];
     $data['notification'] = $notification[$_POST['notification']];
-
+    
 
 }
 ######## mail送信関連 ########
@@ -126,7 +130,7 @@ function create_body_corporate_mail()
     global $data;
     return <<<EOD
 以下の内容でアンケート回答がありました。
-
+日付: {$data['now']}
 Q1: {$data['question1']}
 Q1 その他:{$data['control_other']}
 Q2: {$data['question2']}
