@@ -32,10 +32,15 @@ if (count($error_msgs) > 0) {
 
 
 function conv_post_data (){
-    global $data, $question1, $question2, $question3, $jobs, $notification;
+    global $data, $question1, $question2, $question3,$question4,$question5, $jobs, $notification;
     $data['question1'] =  $question1[$_POST['question1']];
+    $data['control_other'] =  $_POST['control_other'];
     $data['question2'] = $question2[$_POST['question2']];
+    $data['protect_other'] =  $_POST['protect_other'];
     $data['question3'] = $question3[$_POST['question3']];
+    $data['question4'] = $question4[$_POST['question4']];
+    $data['question5'] = $question5[$_POST['question5']];
+
     $data['name'] = $_POST['name'];
     $data['email'] = $_POST['email'];
     $data['jobs'] = $jobs[$_POST['jobs']];
@@ -45,6 +50,7 @@ function conv_post_data (){
     $data['city'] = $_POST['city'];
     $data['address'] = $_POST['address'];
     $data['facility'] = $_POST['facility'];
+    $data['department'] = $_POST['department'];
     $data['notification'] = $notification[$_POST['notification']];
 
 
@@ -122,8 +128,13 @@ function create_body_corporate_mail()
 以下の内容でアンケート回答がありました。
 
 Q1: {$data['question1']}
+Q1 その他:{$data['control_other']}
 Q2: {$data['question2']}
+Q2 その他:{$data['protect_other']}
 Q3: {$data['question3']}
+Q4: {$data['question4']}
+Q5: {$data['question5']}
+
 名前: {$data['name']}
 電子メール: {$data['email']}
 ご職業:{$data['jobs']}
@@ -133,6 +144,8 @@ Q3: {$data['question3']}
 市区町村:{$data['city']}
 番地:{$data['address']}
 ご所属施設名:{$data['facility']}
+ご所属(部門名、病棟など):{$data['department']}
+
 通知の同意:{$data['notification']}
 
 以上

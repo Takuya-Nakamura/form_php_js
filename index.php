@@ -8,6 +8,7 @@ include './conf.php';
 
 <head>
     <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+    <title>入力画面</title>
     <link rel="shortcut icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/app.css">
@@ -17,14 +18,13 @@ include './conf.php';
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177047657-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-
         function gtag() {
             dataLayer.push(arguments);
         }
         gtag('js', new Date());
-
         gtag('config', 'UA-177047657-1');
     </script>
+
 
 </head>
 
@@ -55,9 +55,11 @@ include './conf.php';
         <div class="form">
 
             <form method="post">
-                <div class="form-item">
+
+
+            <div class="form-item">
                     <label class="form-label">Q1:
-                        メピレックスボーダーフレックスに使用しているドレッシング材の柔軟性を向上させる技術の名前は何ですか？
+                        褥瘡を管理するうえで最も重要と考える点は何ですか。
                     </label>
 
                     <?php $q = 'question1' ?>
@@ -66,15 +68,37 @@ include './conf.php';
                         <div class="form-radio-wrap">
                             <input type="radio" name="<?php echo $q ?>" id="<?php echo $id ?>" value="<?php echo $key ?>" required />
                             <label for="<?php echo $id ?>"><?php echo $val ?></label>
+                            
                         </div>
                     <?php endforeach; ?>
+                    <label class="form-label">その他の場合は下記に入力してください</label>
+                    <input class="form-input" type="text" name='control_other' placeholder="その他">
                 </div>
 
                 <div class="form-item">
-                    <label class="form-label">Q2: 次の文のOOOOに入る語句を選んでください。</label>
-                    <p class="question">[メピレックス ボーダー プロテクトは独自のOOOOによって、摩擦やずれを予防する皮膚保護パッドです。]</p>
+                    <label class="form-label">Q2:
+                        皮膚保護を行う際に重視する点を教えてください。
+                    </label>
                     <?php $q = 'question2' ?>
                     <?php foreach ($question2 as $key => $val) : ?>
+                        <?php $id = "{$q}-${key}" ?>
+                        <div class="form-radio-wrap">
+                            <input type="radio" name="<?php echo $q ?>" id="<?php echo $id ?>" value="<?php echo $key ?>" required />
+                            <label for="<?php echo $id ?>"><?php echo $val ?></label>
+                        </div>
+                    <?php endforeach; ?>
+                    <label class="form-label">その他の場合は下記に入力してください</label>
+                    <input class="form-input" type="text" name='protect_other' placeholder="その他">
+
+                </div>
+
+
+                <div class="form-item">
+                    <label class="form-label">Q3:
+                        メピレックスボーダーフレックスに使用しているドレッシング材の柔軟性を向上させる技術の名前は何ですか？
+                    </label>
+                    <?php $q = 'question3' ?>
+                    <?php foreach ($question3 as $key => $val) : ?>
                         <?php $id = "{$q}-${key}" ?>
                         <div class="form-radio-wrap">
                             <input type="radio" name="<?php echo $q ?>" id="<?php echo $id ?>" value="<?php echo $key ?>" required />
@@ -84,9 +108,22 @@ include './conf.php';
                 </div>
 
                 <div class="form-item">
-                    <label class="form-label">Q3: メンリッケヘルスケアでは、新しく創傷治療に携わる医療従事者のみなさまを対象としたエデュケーションサイトをオープンさせました。このエデュケーションサイトの名前は？ </label>
-                    <?php $q = 'question3' ?>
-                    <?php foreach ($question3 as $key => $val) : ?>
+                    <label class="form-label">Q4: 次の文のOOOOに入る語句を選んでください。</label>
+                    <p class="question">[メピレックス ボーダー プロテクトは独自のOOOOによって、摩擦やずれを予防する皮膚保護パッドです。]</p>
+                    <?php $q = 'question4' ?>
+                    <?php foreach ($question4 as $key => $val) : ?>
+                        <?php $id = "{$q}-${key}" ?>
+                        <div class="form-radio-wrap">
+                            <input type="radio" name="<?php echo $q ?>" id="<?php echo $id ?>" value="<?php echo $key ?>" required />
+                            <label for="<?php echo $id ?>"><?php echo $val ?></label>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+
+                <div class="form-item">
+                    <label class="form-label">Q5: メンリッケヘルスケアでは、新しく創傷治療に携わる医療従事者のみなさまを対象としたエデュケーションサイトをオープンさせました。このエデュケーションサイトの名前は？ </label>
+                    <?php $q = 'question5' ?>
+                    <?php foreach ($question5 as $key => $val) : ?>
                         <?php $id = "{$q}-${key}" ?>
                         <div class="form-radio-wrap">
                             <input type="radio" name="<?php echo $q ?>" id="<?php echo $id ?>" value="<?php echo $key ?>" required />
@@ -139,6 +176,7 @@ include './conf.php';
                     <input class="form-input" type='text' name='city' required placeholder="市区町村＊">
                     <input class="form-input" type='text' name='address' required placeholder="番地＊">
                     <input class="form-input" type='text' name='facility' required placeholder="ご所属施設名＊">
+                    <input class="form-input" type='text' name='department' required placeholder="ご所属（部門名、病棟など）＊">
                 </div>
 
                 <div class="form-item">

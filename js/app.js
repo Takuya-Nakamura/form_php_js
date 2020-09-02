@@ -69,8 +69,13 @@ function post(data) {
 function getFormData() {
     var data = {}
     data['question1'] = $('input[name=question1]:checked').val()
+    data['control_other'] = $('input[name=control_other]').val()
     data['question2'] = $('input[name=question2]:checked').val()
+    data['protect_other'] = $('input[name=protect_other]').val()
     data['question3'] = $('input[name=question3]:checked').val()
+    data['question4'] = $('input[name=question4]:checked').val()
+    data['question5'] = $('input[name=question5]:checked').val()
+
     data['name'] = $('input[name=name]').val()
     data['email'] = $('input[name=email]').val()
     data['jobs'] = $('select[name=jobs]').val()
@@ -80,6 +85,7 @@ function getFormData() {
     data['city'] = $('input[name=city]').val()
     data['address'] = $('input[name=address]').val()
     data['facility'] = $('input[name=facility]').val()
+    data['department'] = $('input[name=department]').val()
     data['notification'] = $('input[name=notification]:checked').val()
     data['policy'] = $('input[name=policy]:checked').val()
     console.log("data", data)
@@ -104,6 +110,7 @@ function checkFormData(data) {
     if (!data['city']) messages.push("市区町村が未入力です")
     if (!data['address']) messages.push("番地が未入力です")
     if (!data['facility']) messages.push("ご所属施設名が未入力です")
+    if (!data['department']) messages.push("ご所属(部門名、病棟など)が未入力です")
     if (!data['notification']) messages.push("通知の希望が未選択です")
     if (!data['policy']) messages.push("プライバシーポリシーに同意してください。")
 
