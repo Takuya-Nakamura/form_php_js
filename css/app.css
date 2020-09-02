@@ -107,7 +107,7 @@ main{
   margin-bottom: 10px;
 }
 
-.form .job_other {
+.form .hidden {
   display: none;
 }
 

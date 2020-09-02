@@ -117,8 +117,8 @@ EOD;
 function send_mail_to_corporate()
 {
     $res = mb_send_mail(
-        "nakamura0803@gmail.com",
-        // "info.jp@molnlycke.com",
+        // "nakamura0803@gmail.com",
+        "info.jp@molnlycke.com",
         "第22回日本褥瘡学会学術集会アンケート回答",
         create_body_corporate_mail(),
         "From: no-reply@molnlycke.com\r\n"
@@ -132,9 +132,9 @@ function create_body_corporate_mail()
 以下の内容でアンケート回答がありました。
 日付: {$data['now']}
 Q1: {$data['question1']}
-Q1 その他:{$data['control_other']}
+Q1 その他詳細:{$data['control_other']}
 Q2: {$data['question2']}
-Q2 その他:{$data['protect_other']}
+Q2 その他詳細:{$data['protect_other']}
 Q3: {$data['question3']}
 Q4: {$data['question4']}
 Q5: {$data['question5']}
@@ -216,6 +216,22 @@ function question3Check()
     global $error_msgs;
     if (!$_POST['question3']) {
         $error_msgs[] = ["name" => "question3", "message" => "Q3が未入力です。"];
+    }
+}
+
+function question4Check()
+{
+    global $error_msgs;
+    if (!$_POST['question4']) {
+        $error_msgs[] = ["name" => "question4", "message" => "Q4が未入力です。"];
+    }
+}
+
+function question5Check()
+{
+    global $error_msgs;
+    if (!$_POST['question5']) {
+        $error_msgs[] = ["name" => "question5", "message" => "Q5が未入力です。"];
     }
 }
 

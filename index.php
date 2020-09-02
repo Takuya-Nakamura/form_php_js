@@ -70,9 +70,8 @@ include './conf.php';
                             <label for="<?php echo $id ?>"><?php echo $val ?></label>
                             
                         </div>
-                    <?php endforeach; ?>
-                    <label class="form-label">その他の場合は下記に入力してください</label>
-                    <input class="form-input" type="text" name='control_other' placeholder="その他">
+                    <?php endforeach; ?>                    
+                    <input class="form-input hidden" type="text" name='control_other' placeholder=""その他の方は詳細のご記入をお願い致します。"">
                 </div>
 
                 <div class="form-item">
@@ -87,8 +86,7 @@ include './conf.php';
                             <label for="<?php echo $id ?>"><?php echo $val ?></label>
                         </div>
                     <?php endforeach; ?>
-                    <label class="form-label">その他の場合は下記に入力してください</label>
-                    <input class="form-input" type="text" name='protect_other' placeholder="その他">
+                    <input class="form-input hidden" type="text" name='protect_other' placeholder="その他の方は詳細のご記入をお願い致します">
 
                 </div>
 
@@ -162,7 +160,7 @@ include './conf.php';
                         <?php endforeach; ?>
                     </select>
 
-                    <input class="form-input job_other" type="text" name='job_other' placeholder="その他の方は詳細のご記入をお願い致します＊">
+                    <input class="form-input hidden" type="text" name='job_other' placeholder="その他の方は詳細のご記入をお願い致します＊">
 
                 </div>
 

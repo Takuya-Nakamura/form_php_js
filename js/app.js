@@ -25,14 +25,32 @@ $("#policy").change(function () {
 })
 
 $('select[name=jobs]').change(function () {
-    console.log("change", $(this).val())
+    var name = "job_other"
     if ($(this).val() == 7) {
-        $('input[name=job_other]').fadeIn()
+        $(`input[name=${name}]`).fadeIn()
     } else {
-        $('input[name=job_other]').fadeOut()
-        $('input[name=job_other]').val("")
+        $(`input[name=${name}]`).fadeOut().val("")
     }
 })
+
+$('input[name=question1]').change(function () {
+    var name = "control_other"
+    if ($(this).val() == 6) {
+        $(`input[name=${name}]`).fadeIn()
+    } else {
+        $(`input[name=${name}]`).fadeOut().val("")
+    }
+})
+
+$('input[name=question2]').change(function () {
+    var name = "protect_other"
+    if ($(this).val() == 5) {
+        $(`input[name=${name}]`).fadeIn()
+    } else {
+        $(`input[name=${name}]`).fadeOut().val("")
+    }
+})
+
 
 //////////////////////////////
 // functions
@@ -98,6 +116,9 @@ function checkFormData(data) {
     if (!data['question1']) messages.push("Q1が未入力です")
     if (!data['question2']) messages.push("Q2が未入力です")
     if (!data['question3']) messages.push("Q3が未入力です")
+    if (!data['question4']) messages.push("Q4が未入力です")
+    if (!data['question5']) messages.push("Q5が未入力です")
+
     if (!data['name']) messages.push("名前が未入力です")
     if (!data['email']) messages.push("メールアドレスが未入力です")
     if (data['email'] && !chekckEmail(data['email'])) {
