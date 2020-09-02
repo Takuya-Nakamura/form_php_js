@@ -68,10 +68,9 @@ include './conf.php';
                         <div class="form-radio-wrap">
                             <input type="radio" name="<?php echo $q ?>" id="<?php echo $id ?>" value="<?php echo $key ?>" required />
                             <label for="<?php echo $id ?>"><?php echo $val ?></label>
-                            
                         </div>
                     <?php endforeach; ?>                    
-                    <input class="form-input hidden" type="text" name='control_other' placeholder=""その他の方は詳細のご記入をお願い致します。"">
+                    <input class="form-input hidden" type="text" name='control_other' placeholder="その他の方は詳細のご記入をお願い致します。">
                 </div>
 
                 <div class="form-item">
