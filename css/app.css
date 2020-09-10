@@ -54,6 +54,9 @@ main{
 .key-image img{
   width: 100%;
 }
+.key-image video{
+  width: 100%;
+}
 
 .description {
   margin-bottom: 10px;
@@ -155,6 +158,11 @@ main{
 }
 
  /* note */
+ .description-note{
+  font-size: 0.8rem;
+  margin-top:15px;
+  margin-bottom: 15px;
+}
 .submit-note{
   text-align: center;
   font-size: 0.8rem;
@@ -238,4 +246,56 @@ footer{
 .inquiry-area{
   margin-top: 40px;
   margin-bottom: 40px;
+}
+
+
+
+
+/* modal */
+.content{
+  margin: 0 auto;
+  
+}
+.modal{
+  display: none;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.modal__bg{
+  background: rgba(0,0,0,0.8);
+  height: 100vh;
+  position: absolute;
+  width: 100%;
+}
+.modal__content{
+  background: #fff;
+  left: 50%;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 80%;
+}
+
+
+.keyword-area{
+  margin:20px 0;
+  padding:15px;
+  /* border: 1px black solid; */
+}
+.keyword-area p{
+  text-align: center;
+}
+
+.keyword-description{
+  font-size: 1rem;  
+  margin-bottom: 10px;
+  color: #009c14;
+}
+
+.keyword{
+  font-size: 1.5rem;
+  color: red;
 }

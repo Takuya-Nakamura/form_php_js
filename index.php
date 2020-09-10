@@ -8,7 +8,7 @@ include './conf.php';
 
 <head>
     <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
-    <title>入力画面</title>
+    <title>メンリッケヘルスケアオンライン展示</title>
     <link rel="shortcut icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/app.css">
@@ -18,6 +18,7 @@ include './conf.php';
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177047657-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
+
         function gtag() {
             dataLayer.push(arguments);
         }
@@ -57,7 +58,7 @@ include './conf.php';
             <form method="post">
 
 
-            <div class="form-item">
+                <div class="form-item">
                     <label class="form-label">Q1:
                         褥瘡を管理するうえで最も重要と考える点は何ですか。
                     </label>
@@ -69,7 +70,7 @@ include './conf.php';
                             <input type="radio" name="<?php echo $q ?>" id="<?php echo $id ?>" value="<?php echo $key ?>" required />
                             <label for="<?php echo $id ?>"><?php echo $val ?></label>
                         </div>
-                    <?php endforeach; ?>                    
+                    <?php endforeach; ?>
                     <input class="form-input hidden" type="text" name='control_other' placeholder="その他の方は詳細のご記入をお願い致します。">
                 </div>
 
@@ -215,6 +216,12 @@ include './conf.php';
                     ※プライバシーポリシーに同意いただかないと送信出来ません。 <br>
                     ※アンケートの回答のみご覧になりたい方は<a href="answer.php">こちら</a>
                 </p>
+
+                <div class="keyword-area">
+                    <p class="keyword-description">第22回日本褥瘡学会学術集会スタンプラリーキーワード </p>
+                    <p class="keyword">【 福原 】</p>
+                </div>
+
                 <div class="key-image">
                     <img src="./images/lady.jpg" alt="">
                 </div>

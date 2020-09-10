@@ -7,7 +7,7 @@ include './conf.php';
 <html>
 
 <head>
-    <title>完了画面</title>
+    <title>メンリッケヘルスケアオンライン展示</title>
     <link rel="shortcut icon" href="/images/favicon.ico">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
     <link rel="stylesheet" href="/css/reset.css">
@@ -38,7 +38,7 @@ include './conf.php';
             <h1>アンケートにご協力下さりありがとうございます。</h1>
         </div>
 
-        <p>回答は</p>
+        <p>Q3～Q5の正解は</p>
         <div class="answer-area">
             <div class="answers">
                 <p class="answer"><span class="q">Q3</span><span class="a">多層構造</p>
