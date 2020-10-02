@@ -1,10 +1,10 @@
 //////////////////////////////
 // event
 //////////////////////////////
-$(function () {
-    var res = confirm("本サイトは医療関係者のみが閲覧出来ます。医療関係者の方はOKを押してください。それ以外の方はキャンセルをしてください。")
-    if (!res) location.href = "https://www.molnlycke.jp/"
-});
+// $(function () {
+//     var res = confirm("本サイトは医療関係者のみが閲覧出来ます。医療関係者の方はOKを押してください。それ以外の方はキャンセルをしてください。")
+//     if (!res) location.href = "https://www.molnlycke.jp/"
+// });
 
 $("#submit").click(function () {
 

@@ -66,7 +66,7 @@ function send_mail_to_user()
     global $data;
     $res = mb_send_mail(
         $data['email'],
-        "メンリッケヘルスケア アンケートにご協力くださいましてありがとうございました",
+        "確認メール",
         create_body_user_mail(),
         "From: no-reply@molnlycke.com\r\n"
     );
@@ -75,53 +75,17 @@ function send_mail_to_user()
 function create_body_user_mail()
 {
     return <<<EOD
-お世話になっております。
-
-「第22回 日本褥瘡学会学術集会　オンライン展示　特設サイト」においてアンケートにご協力頂き有難うございました。
-    
-トートバッグは、ご記載頂いた宛先に送付させて頂きます。
-    
-9月末頃の発送を予定しております。大変お待たせいたしますが、ご了承頂きますようお願い申し上げます。
-    
-     
-    
-メンリッケヘルスケア株式会社 ウンドケア事業部
-    
-https://www.molnlycke.jp/
-    
-     
-    
-     
-    
-本メールは、「第22回 日本褥瘡学会学術集会　オンライン展示　特設サイト」においてアンケートにご協力いただいた方に自動送信しております。
-    
-トートバッグ発送のご連絡のためにE-mailを差し上げる場合がございます。
-    
-そのほか、アンケート内においてセミナーや製品についてのご案内といった情報配信についてご希望いただいた方には、このE-mailアドレス宛にメール送信させていただくことがございます。
-    
-     
-    
-リーガル　https://www.molnlycke.com/about-this-site/terms-of-use/
-
-プライバシーポリシー　https://www.molnlycke.com/about-this-site/policies/
-
-
-
-Box 13080, Gamlestadvägen 3C, SE-40252 Göteborg, Sweden. Privacy Policy
-
-The Mölnlycke trademark, name and respective logo are registered globally to one or more of the Mölnlycke Health Care Group of Companies. © 2020 Mölnlycke Health Care AB. All rights reserved
-
+    本文
 EOD;
 }
 
 function send_mail_to_corporate()
 {
     $res = mb_send_mail(
-        // "nakamura0803@gmail.com",
-        "info.jp@molnlycke.com",
-        "第22回日本褥瘡学会学術集会アンケート回答",
+        "nakamura0803@gmail.com",
+        "内部向けメール",
         create_body_corporate_mail(),
-        "From: no-reply@molnlycke.com\r\n"
+        "From: nakamura0803@gmail.com\r\n"
     );
 }
 
@@ -129,31 +93,8 @@ function create_body_corporate_mail()
 {
     global $data;
     return <<<EOD
-以下の内容でアンケート回答がありました。
-日付: {$data['now']}
-Q1: {$data['question1']}
-Q1 その他詳細:{$data['control_other']}
-Q2: {$data['question2']}
-Q2 その他詳細:{$data['protect_other']}
-Q3: {$data['question3']}
-Q4: {$data['question4']}
-Q5: {$data['question5']}
 
-名前: {$data['name']}
-電子メール: {$data['email']}
-ご職業:{$data['jobs']}
-その他詳細:{$data['job_other']}
-郵便番号:{$data['zip-code']}
-都道府県:{$data['prefecture']}
-市区町村:{$data['city']}
-番地:{$data['address']}
-ご所属施設名:{$data['facility']}
-ご所属(部門名、病棟など):{$data['department']}
-
-通知の同意:{$data['notification']}
-
-以上
-
+    内部むけ本文
 EOD;
 }
 
